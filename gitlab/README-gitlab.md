@@ -9,8 +9,8 @@ This repository serves GitHub and GitLab from one source. On GitLab repos:
 - Branch protection: Settings -> Repository -> Protected branches
   (`main`: no push allowed, maintainers merge), plus
   Settings -> Merge requests -> merge checks as needed.
-- Shared CI: when a group has common CI files (e.g. `6admin.io/docker/common_ci`),
-  include them instead of duplicating:
+- Shared CI: when a group has common CI files
+  (e.g. `6admin.io/docker/common_ci`), include them instead of duplicating:
 
 ```yaml
 include:

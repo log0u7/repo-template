@@ -4,7 +4,8 @@ Describe the change and why it is needed.
 
 ## Tests (mandatory)
 
-State the red-green flow: which test did you write first that failed, and what made it pass?
+State the red-green flow: which failing test did you write first, and what
+made it pass?
 
 ## Linked issue
 

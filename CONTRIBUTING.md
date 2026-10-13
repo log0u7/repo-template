@@ -27,7 +27,7 @@ always green.
 ## Branching
 
 - One branch per topic, cut from `main`:
-  `feat/<scope>`, `fix/<scope>`, `chore/<scope>`, `docs/<scope>`, `test/<scope>`.
+  `feat|fix|chore|docs|test/<scope>`.
 - `main` stays green at all times.
 - Keep branch scope small: one topic, one review, one merge.
 
