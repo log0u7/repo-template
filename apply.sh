@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 # Apply the repo policy package to an existing GitHub repository and lock main.
-# Usage: apply.sh <owner/repo> <ruby|node|python> [--skip-ruleset]
+# Usage: apply.sh <owner/repo> <ruby|node|python|go|none> [--skip-ruleset]
 # Requires: gh (authed), git, ssh access to the repo.
 set -euo pipefail
 
 usage() {
-	echo "Usage: $0 <owner/repo> <ruby|node|python> [--skip-ruleset]" >&2
+	echo "Usage: $0 <owner/repo> <ruby|node|python|go|none> [--skip-ruleset]" >&2
 	exit 1
 }
 [ $# -ge 2 ] || usage
 repo=$1
 lang=$2
 skip_ruleset=${3:-}
-case "$lang" in ruby | node | python) ;; *) usage ;; esac
+case "$lang" in ruby | node | python | go | none) ;; *) usage ;; esac
 here="$(cd "$(dirname "$0")" && pwd)"
 repo_name=${repo#*/}
 
@@ -40,8 +40,8 @@ if [ ! -f CONTRIBUTING.md ]; then
 fi
 [ -f AGENTS.md ] || cp "$here/AGENTS.md" AGENTS.md
 
-# CI skeleton only when no workflow exists yet.
-if [ ! -f .github/workflows/ci.yml ]; then
+# CI skeleton only when a standard one applies and no workflow exists yet.
+if [ "$lang" != "none" ] && [ ! -f .github/workflows/ci.yml ]; then
 	mkdir -p .github/workflows
 	cp "$here/templates/ci/$lang.yml" .github/workflows/ci.yml
 	echo "NOTE: CI skeleton installed, adapt build/test commands." >&2
