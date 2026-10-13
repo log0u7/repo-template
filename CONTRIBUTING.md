@@ -8,7 +8,7 @@ always green.
 
 <!-- setup: replace this section with the actual toolchain commands -->
 
-```sh
+```shsh
 # install toolchain (mise/asdf or package manager of the project)
 # install dependencies
 # run the test suite once to confirm a green baseline
@@ -35,7 +35,7 @@ always green.
 
 Conventional Commits, atomic, English:
 
-```
+```text
 feat(engine): emit rule provenance in result
 fix(parser): reject nested quotes in string atoms
 test(corpus): add regression case for stack6
