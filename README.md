@@ -43,16 +43,16 @@ apply.sh <owner/repo> <ruby|node|python> [--skip-ruleset]
 ## How-to: adapt the skeletons
 
 | File | Adapt when | What to change |
-|------|-----------|----------------|
+| ------ | ----------- | ---------------- |
 | `CONTRIBUTING.md` | always | Setup/commands section to the actual toolchain |
 | `templates/ci/<lang>.yml` | if no CI exists | build/test commands for the project |
-| `templates/dependabot/<lang>.yml` | installed by language | extra ecosystems or groups |
+| `templates/dependabot/<lang>.yml` | per-language deps | extra ecosystems |
 | `AGENTS.md` | optional | project-specific rules for coding agents |
 
 ## Reference: repository layout
 
 | Path | Role | Copied by apply.sh |
-|------|-------|--------------------|
+| ------ | ------- | -------------------- |
 | `.github/pull_request_template.md` | PR checklist and flow | yes, if absent |
 | `.github/ISSUE_TEMPLATE/*.yml` | bug/feature forms + config | yes, if absent |
 | `.github/dependabot.yml` | dependency updates | per-language variant |
