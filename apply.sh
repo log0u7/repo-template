@@ -47,8 +47,10 @@ if [ "$lang" != "none" ] && [ ! -f .github/workflows/ci.yml ]; then
 	echo "NOTE: CI skeleton installed, adapt build/test commands." >&2
 fi
 
-# Per-language dependabot.
-[ -f .github/dependabot.yml ] || cp "$here/templates/dependabot/$lang.yml" .github/dependabot.yml
+# Per-language dependabot (none -> actions only).
+dep_lang=$lang
+[ "$lang" = "none" ] && dep_lang=actions
+[ -f .github/dependabot.yml ] || cp "$here/templates/dependabot/$dep_lang.yml" .github/dependabot.yml
 
 if [ -n "$(git status --porcelain)" ]; then
 	git add -A
