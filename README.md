@@ -52,7 +52,7 @@ apply.sh <owner/repo> <ruby|node|python> [--skip-ruleset]
 ## Reference: repository layout
 
 | Path | Role | Copied by apply.sh |
-|------|------|--------------------|
+|------|-------|--------------------|
 | `.github/pull_request_template.md` | PR checklist and flow | yes, if absent |
 | `.github/ISSUE_TEMPLATE/*.yml` | bug/feature forms + config | yes, if absent |
 | `.github/dependabot.yml` | dependency updates | per-language variant |
