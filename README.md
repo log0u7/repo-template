@@ -45,7 +45,7 @@ apply.sh <owner/repo> <ruby|node|python> [--skip-ruleset]
 | File | Adapt when | What to change |
 | ------ | ----------- | ---------------- |
 | `CONTRIBUTING.md` | always | Setup/commands section to the actual toolchain |
-| `templates/ci/<lang>.yml` | if no CI exists | build/test commands for the project |
+| `templates/ci/<lang>.yml` | if no CI exists | build/test commands |
 | `templates/dependabot/<lang>.yml` | per-language deps | extra ecosystems |
 | `AGENTS.md` | optional | project-specific rules for coding agents |
 
