@@ -1,0 +1,18 @@
+# GitLab CI skeleton. Swap the script lines for the project toolchain, and
+# replace the include with the project's shared CI when one exists.
+#
+# include:
+#   - project: 6admin.io/docker/common_ci
+#     ref: main
+#     file: <shared-file>.yml
+
+stages: [test]
+
+test:
+  stage: test
+  script:
+    - echo "run the test suite here"
+    - echo "run the linter here"
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
