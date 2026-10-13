@@ -1,0 +1,7 @@
+{
+  "config": {
+    "MD041": false,
+    "MD013": { "line_length": 80 }
+  },
+  "ignores": ["node_modules/**"]
+}
