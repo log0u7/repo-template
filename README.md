@@ -54,12 +54,12 @@ apply.sh <owner/repo> <ruby|node|python> [--skip-ruleset]
 | Path | Role | Copied by apply.sh |
 |------|------|--------------------|
 | `.github/pull_request_template.md` | PR checklist and flow | yes, if absent |
-| `.github/ISSUE_TEMPLATE/*.yml` | bug and feature forms, config | yes, if absent |
+| `.github/ISSUE_TEMPLATE/*.yml` | bug/feature forms + config | yes, if absent |
 | `.github/dependabot.yml` | dependency updates | per-language variant |
 | `templates/ci/<lang>.yml` | CI skeleton | yes, if no `ci.yml` |
 | `templates/dependabot/<lang>.yml` | per-language dependabot | yes, if absent |
 | `SECURITY.md` | private vulnerability reporting policy | yes, if absent |
-| `CONTRIBUTING.md` | gitflow, commits, PR flow, releases | yes, if absent (skeleton) |
+| `CONTRIBUTING.md` | gitflow, commits, PR flow, releases | yes, if absent |
 | `AGENTS.md` | coding agent rules | yes, if absent (skeleton) |
 | `apply.sh` | applier and branch-locker | never copied |
 | `gitlab/` | GitLab equivalents | see `gitlab/README-gitlab.md` |
