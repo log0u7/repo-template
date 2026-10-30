@@ -71,7 +71,7 @@ A repository ruleset named `protect-main`, active on `refs/heads/main`:
 - deletions blocked, force pushes blocked (`non_fast_forward`)
 - every change lands through a pull request
 - 0 required approving reviews: the solo maintainer self-merges own PRs
-- merge commit only
+- squash merge only (`allowed_merge_methods: ["squash"]`), branch deleted on merge
 
 CI green is expected before merging but not enforced by the ruleset yet.
 

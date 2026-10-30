@@ -26,7 +26,7 @@ Guidance for coding agents working in this repository.
   test for bug fixes before the fix.
 - Conventional Commits, English only, atomic (one change + its test).
 - `CHANGELOG.md` `[Unreleased]` updated in the same commit for feat/fix.
-- Tags `vX.Y.Z` go on `main` only after the merge lands, on the exact merge
+- Tags `vX.Y.Z` go on `main` only after the merge lands, on the exact squash
   commit, pushed one by one.
 - Secrets never land here: scanning runs in pre-commit and CI.
 

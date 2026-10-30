@@ -80,7 +80,7 @@ gh api -X POST "repos/$repo/rulesets" --input - <<'JSON'
       "require_last_push_approval": false,
       "required_review_thread_resolution": false,
       "required_reviewers": [],
-      "allowed_merge_methods": ["merge"]
+      "allowed_merge_methods": ["squash"]
     }}
   ]
 }

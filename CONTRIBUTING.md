@@ -56,7 +56,8 @@ chore(ci): bump actions group
 2. Open the PR: Conventional Commit title, `Fixes #N` when an issue exists,
    complete the template checklist honestly.
 3. CI must be green (tests, lint, build).
-4. Merge with a merge commit, delete the branch.
+4. Merge with a squash merge; the branch is deleted automatically
+   (`delete_branch_on_merge`).
 
 Review expectations scale with contributors: while the maintainer is the
 single author, own PRs are self-merged; with a second contributor, reviews
@@ -66,7 +67,7 @@ become required.
 
 1. Move `CHANGELOG.md` `[Unreleased]` to a dated section.
 2. Bump the project version.
-3. Tag `vX.Y.Z` on `main` **after** the merge, on the exact merge commit,
+3. Tag `vX.Y.Z` on `main` **after** the merge, on the exact squash commit,
    one tag at a time. Release artifacts publish from CI on the tag.
 
 ## Quality bar
