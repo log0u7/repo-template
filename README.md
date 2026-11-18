@@ -38,7 +38,10 @@ apply.sh <owner/repo> <ruby|node|python> [--skip-ruleset]
   missing. `CONTRIBUTING.md` and the CI skeleton may still need adapting
   to the real toolchain (the script prints a reminder).
 - `--skip-ruleset` applies the files without locking `main` (use when the
-  branch is already protected or when rulesets are unavailable).
+  branch is already protected, or when rulesets are unavailable: on a
+  private repo with the Free plan, `POST repos/*/rulesets` fails with
+  403 "Upgrade to GitHub Pro or make this repository public". Skip the
+  ruleset and enforce the PR flow manually, or make the repo public).
 
 ## How-to: adapt the skeletons
 
